@@ -8,11 +8,11 @@ public class Main {
     public static int[][] graph = new int[n+1][n+1];
     public static int[] visited = new int[n+1];
 
-    public static void DFS(int vertex, int m){
-        for(int i = 1;i<=m;i++){
-            if(graph[vertex][i]==1 && visited[i]==0){
-                visited[i] = 1;
-                DFS(i,m);
+    public static void DFS(int vertex){
+        for(int j = 1;j<=n;j++){
+            if((graph[vertex][j]==1 || graph[j][vertex]==1) && visited[j]==0){
+                visited[j] = 1;
+                DFS(j);
             }
         }
     }
@@ -25,10 +25,7 @@ public class Main {
             graph[x][y] = 1;
         }
 
-        for(int i = 1;i<=n;i++){
-            DFS(i,m);
-        }
-
+        DFS(1);
         int DFS_cnt = 0;
 
         for(int i = 2;i<=n;i++){
