@@ -17,7 +17,7 @@ public class Main {
     }
 
     public static boolean canGo(int y, int x,int n, int m){
-        if(isRange(x,y,n,m) == false){
+        if(isRange(y,x,n,m) == false){
             return false;
         }
         if(visited[y][x]==1 || grid[y][x] == 0){
