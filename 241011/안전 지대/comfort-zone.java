@@ -47,7 +47,7 @@ public class Main {
 
 
         int maxcnt = 0;
-        int res = 0;
+        int res = 1;
         
         for(int k = 1;k<=100;k++){
             for(int i = 0;i<n;i++){
@@ -69,9 +69,8 @@ public class Main {
                 }
             }
 
-            maxcnt = Math.max(maxcnt,num);
-
-            if(maxcnt == num){
+            if(maxcnt<num){
+                maxcnt = num;
                 res = k;
             }
 
