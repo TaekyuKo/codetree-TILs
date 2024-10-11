@@ -19,14 +19,22 @@ public class Main {
                 continue;
             }
             sum+=arr[i];
-            maxsum = Math.max(maxsum,sum);
+            maxsum = Math.max(maxsum, sum);
         }
 
-        if(sum == 0){
-            sum = maxsum;
+        if(maxsum == -1000){
+            int maxmi = -1000;
+            for(int i = 0;i<n;i++){
+                maxmi = Math.max(maxmi,arr[i]);
+            }
+            maxsum = maxmi;
         }
 
-        System.out.println(sum);
+        
+
+
+
+        System.out.println(maxsum);
 
 
     }
