@@ -11,7 +11,7 @@ public class Main {
         }
 
         int sum = 0;
-        int maxsum = -1000;
+        int maxsum = -100000000;
 
         for(int i = 0;i<n;i++){
             if(arr[i]<0){
@@ -22,7 +22,7 @@ public class Main {
             maxsum = Math.max(maxsum, sum);
         }
 
-        if(maxsum == -1000){
+        if(maxsum == -100000000){
             int maxmi = -1000;
             for(int i = 0;i<n;i++){
                 maxmi = Math.max(maxmi,arr[i]);
