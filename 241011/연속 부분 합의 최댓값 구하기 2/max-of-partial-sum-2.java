@@ -23,7 +23,7 @@ public class Main {
         }
 
         if(maxsum == -100000000){
-            int maxmi = -1000;
+            int maxmi = -100000000;
             for(int i = 0;i<n;i++){
                 maxmi = Math.max(maxmi,arr[i]);
             }
