@@ -8,32 +8,34 @@ public class Main {
 
         int[] p = new int[n];
         int[] s = new int[n];
+        int[] sum = new int[n];
         for(int i = 0;i<n;i++){
             p[i] = sc.nextInt();
             s[i] = sc.nextInt();
+            sum[i] = s[i]+p[i];
         }
+        Arrays.sort(sum);
+        Arrays.sort(s);
 
         int res = 0;
         for(int i = 0;i<n;i++){
-            int max_num = 0;
+            int temp_b = b;
+            int cnt = 0;
             for(int j = 0;j<n;j++){
                 if(j==i){
                     p[i]/=2;
                 }
-            }
-            int temp_b = b;
-            for(int k = 0;k<n;k++){
-                if(temp_b-(p[k]+s[k])>=0){
-                    temp_b -= (p[k]+s[k]);
-                    continue;
+                if(temp_b-(p[j]+s[j])>=0){
+                    temp_b -= (p[j]+s[j]);
+                    cnt++;
                 }else{
-                    max_num = k;
                     break;
                 }
+                res = Math.max(res,cnt);
             }
-            res = Math.max(res,max_num);
             p[i]*=2;
         }
+
         System.out.println(res);
 
     }
