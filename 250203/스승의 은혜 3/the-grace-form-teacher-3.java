@@ -12,10 +12,11 @@ public class Main {
         for(int i = 0;i<n;i++){
             p[i] = sc.nextInt();
             s[i] = sc.nextInt();
-            sum[i] = s[i]+p[i];
+            sum[i] = p[i]+s[i];
         }
         Arrays.sort(sum);
         Arrays.sort(s);
+        Arrays.sort(p);
 
         int res = 0;
         for(int i = 0;i<n;i++){
@@ -25,14 +26,15 @@ public class Main {
                 if(j==i){
                     p[i]/=2;
                 }
+
                 if(temp_b-(p[j]+s[j])>=0){
                     temp_b -= (p[j]+s[j]);
                     cnt++;
                 }else{
                     break;
                 }
-                res = Math.max(res,cnt);
             }
+            res = Math.max(res,cnt);
             p[i]*=2;
         }
 
