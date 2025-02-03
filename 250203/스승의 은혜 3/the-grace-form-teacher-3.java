@@ -17,21 +17,22 @@ public class Main {
         for(int i = 0;i<n;i++){
             int max_num = 0;
             for(int j = 0;j<n;j++){
-                if(i==j){
+                if(j==i){
                     p[i]/=2;
                 }
-                int temp_b = b;
-                for(int k = 0;k<n;k++){
-                    if(temp_b-(p[i]+s[i])>=0){
-                        temp_b -= (p[i]+s[i]);
-                        continue;
-                    }else{
-                        max_num = k;
-                        break;
-                    }
+            }
+            int temp_b = b;
+            for(int k = 0;k<n;k++){
+                if(temp_b-(p[k]+s[k])>=0){
+                    temp_b -= (p[k]+s[k]);
+                    continue;
+                }else{
+                    max_num = k;
+                    break;
                 }
             }
             res = Math.max(res,max_num);
+            p[i]*=2;
         }
         System.out.println(res);
 
