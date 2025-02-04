@@ -20,15 +20,19 @@ public class Main {
 
         int res = 0;
         for(int i = 0;i<n;i++){
-            int temp_b = b - (p[i]/2 + s[i]);
-            if(temp_b<0){
-                continue;
-            }
-            int cnt = 1;
+            int cnt = 0;
+            int temp_b = b;
             for(int j = 0;j<n;j++){
                 if(j==i){
-                    continue;
+                    if(temp_b - (p[i]/2 + s[i])>=0){
+                        temp_b -= (p[i]/2 + s[i]);
+                        cnt++;
+                        continue;
+                    }else{
+                        break;
+                    }
                 }
+
                 if(temp_b-sum[j]>=0){
                     temp_b -= sum[j];
                     cnt++;
