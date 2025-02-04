@@ -8,11 +8,9 @@ public class Main {
 
         int[] p = new int[n];
         int[] s = new int[n];
-        int[] sum = new int[n];
         for(int i = 0;i<n;i++){
             p[i] = sc.nextInt();
             s[i] = sc.nextInt();
-            sum[i] = p[i]+s[i];
         }
         
         int res = 0;
