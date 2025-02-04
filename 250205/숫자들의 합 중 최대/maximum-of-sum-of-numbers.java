@@ -10,8 +10,8 @@ public class Main {
         for(int i = x;i<=y;i++){
             int d1 = i/10000;
             int d2 = (i/1000) % 10;
-            int d3 = (i/100) % 100;
-            int d4 = (i/10) % 1000;
+            int d3 = (i/100) % 10;
+            int d4 = (i/10) % 10;
             int d5 = i % 10;
             int sum = d1+d2+d3+d4+d5;
             max = Math.max(max,sum);
