@@ -15,9 +15,6 @@ public class Main {
             sum[i] = p[i]+s[i];
         }
         
-
-
-
         int res = 0;
         for(int i = 0;i<n;i++){
             int cnt = 1; 
