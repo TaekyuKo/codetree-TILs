@@ -23,10 +23,7 @@ public class Main {
                 break;
             }
         }
-
         return res;
-
-
     }
 
     public static int digit(int x){
@@ -50,7 +47,6 @@ public class Main {
                 res++;
             }
         }
-
         System.out.println(res);
     }
 }
