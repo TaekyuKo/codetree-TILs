@@ -14,27 +14,26 @@ public class Main {
             s[i] = sc.nextInt();
             sum[i] = p[i]+s[i];
         }
-        Arrays.sort(sum);
-        Arrays.sort(s);
-        Arrays.sort(p);
+        
+
+
 
         int res = 0;
         for(int i = 0;i<n;i++){
-            int cnt = 0;
-            int temp_b = b;
-            for(int j = 0;j<n;j++){
-                if(j==i){
-                    if(temp_b - (p[i]/2 + s[i])>=0){
-                        temp_b -= (p[i]/2 + s[i]);
-                        cnt++;
-                        continue;
-                    }else{
-                        break;
-                    }
-                }
-
-                if(temp_b-sum[j]>=0){
-                    temp_b -= sum[j];
+            int cnt = 1; 
+            int temp_b = b - (p[i]/2 + s[i]);
+            
+            if(temp_b < 0){
+                continue; 
+            } 
+            
+            int[] temp_sum = sum.clone(); 
+            temp_sum[i] = Integer.MAX_VALUE; 
+            Arrays.sort(temp_sum);
+            
+            for(int j = 0;j<n-1;j++){  
+                if(temp_b-temp_sum[j]>=0){
+                    temp_b -= temp_sum[j];
                     cnt++;
                 }else{
                     break;
