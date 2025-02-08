@@ -15,7 +15,6 @@ public class Main {
         }
 
         int res = 0;
-        int max_cnt = 0;
         for(int i =1;i<=3;i++){
             int dol = i;
             int temp_cnt = 0;
@@ -33,10 +32,7 @@ public class Main {
                 }
             }
 
-            if(max_cnt<temp_cnt){
-                max_cnt = temp_cnt;
-                res = i;
-            }
+            res = Math.max(res,temp_cnt);
         }
 
         System.out.println(res);
