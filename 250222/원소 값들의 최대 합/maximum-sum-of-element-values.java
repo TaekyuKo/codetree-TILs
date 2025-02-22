@@ -12,7 +12,7 @@ public class Main {
         }
 
         int res_max = 0;
-        for(int i =1;i<=5;i++){
+        for(int i =1;i<=n;i++){
             int temp = 0;
             int point = i;
             for(int j =0;j<m;j++){
