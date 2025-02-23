@@ -20,8 +20,16 @@ public class Main {
                 num[i]=1;
             }
 
+            int idx = -1;
+            for(int a = 0;a<n;a++){
+                if(num[a]==1){
+                    idx = a+1;
+                    break;
+                }
+            }
+
             int temp = 0;
-            for(int a= 1;a<n;a++){
+            for(int a= idx;a<n;a++){
                 if(num[a]==0){
                     temp++;
                 }else{
