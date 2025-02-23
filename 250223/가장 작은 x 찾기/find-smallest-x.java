@@ -14,7 +14,7 @@ public class Main {
 
         boolean res = true;
         int min = 0;
-        for(int x =a[0];x<=b[0];x++){
+        for(int x =1;x<=1000;x++){
             int dou = x*2;
             for(int i = 0;i<n;i++){
                 if(dou>=a[i] && dou<=b[i]){
